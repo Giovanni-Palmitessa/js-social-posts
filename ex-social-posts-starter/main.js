@@ -106,7 +106,7 @@ for (let i = 0; i < posts.length; i++) {
     `
 };
 
-let likeBtn = document.querySelector('.like-button');
+let likeBtn = document.querySelectorAll('.like-button');
 let likeCounter = document.querySelector('.js-likes-counter');
 
 
