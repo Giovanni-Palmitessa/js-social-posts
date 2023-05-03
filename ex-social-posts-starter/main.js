@@ -62,7 +62,7 @@ let profileImage = document.querySelectorAll('.profile-pic');
 let author = document.querySelectorAll('.post-meta__author');
 let postTime = document.querySelectorAll('.post-meta__time');
 let postCOntent = document.querySelectorAll('.post__text');
-let likeCounter = document.querySelectorAll('.js-likes-counter');
+
 
 // CICLO FOR PER STAMPARE IN PAGINA I POST
 
@@ -104,9 +104,11 @@ for (let i = 0; i < posts.length; i++) {
 };
 
 let likeBtn = document.querySelector('.like-button');
+let likeCounter = document.querySelector('.js-likes-counter');
 
 likeBtn.addEventListener('click' , function() {
     likeBtn.classList.toggle('red');
+    likeCounter.innerHTML += `${posts[i].likes + 1}`
 })
 
 
