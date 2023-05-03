@@ -107,14 +107,21 @@ for (let i = 0; i < posts.length; i++) {
 };
 
 let likeBtn = document.querySelectorAll('.like-button');
-let likeCounter = document.querySelector('.js-likes-counter');
+let likeCounter = document.querySelectorAll('.js-likes-counter');
 
 for (let i = 0; i < likeBtn.length; i++) {
     const likeCtr = likeBtn[i];
     likeCtr.addEventListener('click', function() {
-        this.classList.toggle('red')}
-    )
-}
+        this.classList.toggle('red')},
+        // likeNumber = '',
+        likeCounter[i].innerHTML += 1
+        )
+};
+
+// for (let i = 0; i < likeCounter.length; i++) {
+//     const counter = likeCounter[i];
+//     counter.innerHTML += likeCounter[i] + 1;
+// }
 
 // likeBtn.addEventListener('click' , function() {
 //     likeBtn.classList.toggle('red');
