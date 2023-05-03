@@ -38,7 +38,7 @@ const posts = [
         "media": "https://unsplash.it/600/400?image=24",
         "author": {
             "name": "Luca Formicola",
-            "image": null
+            "image": "https://unsplash.it/300/300?image=48"
         },
         "likes": 56,
         "created": "2021-04-03"
@@ -57,7 +57,7 @@ const posts = [
 ];
 
 //SELEZIONIAMO TUTTI GLI ELEMENTI CHE SERVONO
-let postContainer = document.querySelector('.post');
+let postContainer = document.querySelector('.posts-list');
 let profileImage = document.querySelectorAll('.profile-pic');
 let author = document.querySelectorAll('.post-meta__author');
 let postTime = document.querySelectorAll('.post-meta__time');
@@ -71,33 +71,35 @@ for (let i = 0; i < posts.length; i++) {
     let post = posts[i];
 
     postContainer.innerHTML += `
-    <div class="post__header">
-                <div class="post-meta">                    
-                    <div class="post-meta__icon">
-                        <img class="profile-pic" src="${post.author.image}" alt="${post.author.name}">                    
+        <div class="post">
+        <div class="post__header">
+                    <div class="post-meta">
+                        <div class="post-meta__icon">
+                            <img class="profile-pic" src="${post.author.image}" alt="${post.author.name}">                    
+                        </div>
+                        <div class="post-meta__data">
+                            <div class="post-meta__author">${post.author.name}</div>
+                            <div class="post-meta__time">${post.created}</div>
+                        </div>                    
                     </div>
-                    <div class="post-meta__data">
-                        <div class="post-meta__author">${post.author.name}</div>
-                        <div class="post-meta__time">${post.created}</div>
-                    </div>                    
                 </div>
-            </div>
-            <div class="post__text">${post.content}</div>
-            <div class="post__image">
-                <img src="${post.media}" alt="">
-            </div>
-            <div class="post__footer">
-                <div class="likes js-likes">
-                    <div class="likes__cta">
-                        <a class="like-button  js-like-button" href="#" data-postid="${post.id}">
-                            <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
-                            <span class="like-button__label">Mi Piace</span>
-                        </a>
+                <div class="post__text">${post.content}</div>
+                <div class="post__image">
+                    <img src="${post.media}" alt="">
+                </div>
+                <div class="post__footer">
+                    <div class="likes js-likes">
+                        <div class="likes__cta">
+                            <a class="like-button  js-like-button" href="#" data-postid="${post.id}">
+                                <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                                <span class="like-button__label">Mi Piace</span>
+                            </a>
+                        </div>
+                        <div class="likes__counter">
+                            Piace a <b id="like-counter-1" class="js-likes-counter">${post.likes}</b> persone
+                        </div>
                     </div>
-                    <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">${post.likes}</b> persone
-                    </div>
-                </div> 
-            </div>
+                </div>
+        </div>
     `
 }
