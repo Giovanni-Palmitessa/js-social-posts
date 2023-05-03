@@ -112,10 +112,14 @@ let likeCounter = document.querySelectorAll('.js-likes-counter');
 for (let i = 0; i < likeBtn.length; i++) {
     const likeCtr = likeBtn[i];
     likeCtr.addEventListener('click', function() {
-        this.classList.toggle('red')},
-        // likeNumber = '',
-        likeCounter[i].innerHTML += 1
-        )
+        this.classList.toggle('red');
+
+        if(likeCtr.classList.contains('red')) {
+            likeCounter[i].innerHTML++
+        } else {
+            likeCounter[i].innerHTML--
+        }
+    })
 };
 
 // for (let i = 0; i < likeCounter.length; i++) {
