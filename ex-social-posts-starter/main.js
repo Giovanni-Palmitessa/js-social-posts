@@ -103,7 +103,7 @@ for (let i = 0; i < posts.length; i++) {
     `
 };
 
-let likeBtn = document.querySelectorAll('.likes__cta');
+let likeBtn = document.querySelector('.like-button');
 
 likeBtn.addEventListener('click' , function() {
     likeBtn.classList.toggle('red');
