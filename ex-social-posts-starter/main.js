@@ -109,13 +109,19 @@ for (let i = 0; i < posts.length; i++) {
 let likeBtn = document.querySelectorAll('.like-button');
 let likeCounter = document.querySelector('.js-likes-counter');
 
+for (let i = 0; i < likeBtn.length; i++) {
+    const likeCtr = likeBtn[i];
+    likeCtr.addEventListener('click', function() {
+        this.classList.toggle('red')}
+    )
+}
 
-likeBtn.addEventListener('click' , function() {
-    likeBtn.classList.toggle('red');
-    likeCounter.innerHTML = '';
-    likeCounter.innerHTML += `${likeNumber + 1}`
-    console.log(likeNumber);
-})
+// likeBtn.addEventListener('click' , function() {
+//     likeBtn.classList.toggle('red');
+//     likeCounter.innerHTML = '';
+//     likeCounter.innerHTML += `${likeNumber + 1}`
+//     console.log(likeNumber);
+// })
 
 
 
