@@ -109,8 +109,10 @@ for (let i = 0; i < posts.length; i++) {
 let likeBtn = document.querySelector('.like-button');
 let likeCounter = document.querySelector('.js-likes-counter');
 
+
 likeBtn.addEventListener('click' , function() {
     likeBtn.classList.toggle('red');
+    likeCounter.innerHTML = '';
     likeCounter.innerHTML += `${likeNumber + 1}`
     console.log(likeNumber);
 })
