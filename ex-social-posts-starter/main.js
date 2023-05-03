@@ -61,13 +61,16 @@ let postContainer = document.querySelector('.posts-list');
 let profileImage = document.querySelectorAll('.profile-pic');
 let author = document.querySelectorAll('.post-meta__author');
 let postTime = document.querySelectorAll('.post-meta__time');
-let postCOntent = document.querySelectorAll('.post__text');
+let postContent = document.querySelectorAll('.post__text');
+let likeNumber;
 
 
 // CICLO FOR PER STAMPARE IN PAGINA I POST
 
 for (let i = 0; i < posts.length; i++) {
     let post = posts[i];
+
+    likeNumber = post.likes;
 
     postContainer.innerHTML += `
         <div class="post">
@@ -95,7 +98,7 @@ for (let i = 0; i < posts.length; i++) {
                             </a>
                         </div>
                         <div class="likes__counter">
-                            Piace a <b id="like-counter-1" class="js-likes-counter">${post.likes}</b> persone
+                            Piace a <b id="like-counter-1" class="js-likes-counter">${likeNumber}</b> persone
                         </div>
                     </div>
                 </div>
@@ -108,7 +111,7 @@ let likeCounter = document.querySelector('.js-likes-counter');
 
 likeBtn.addEventListener('click' , function() {
     likeBtn.classList.toggle('red');
-    likeCounter.innerHTML += `${posts[i].likes + 1}`
+    likeCounter.innerHTML += `${likeNumber + 1}`
 })
 
 
