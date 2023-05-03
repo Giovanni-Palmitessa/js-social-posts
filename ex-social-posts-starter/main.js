@@ -63,6 +63,7 @@ let author = document.querySelectorAll('.post-meta__author');
 let postTime = document.querySelectorAll('.post-meta__time');
 let postContent = document.querySelectorAll('.post__text');
 let likeNumber;
+let likedPosts = [];
 
 
 // CICLO FOR PER STAMPARE IN PAGINA I POST
@@ -115,7 +116,8 @@ for (let i = 0; i < likeBtn.length; i++) {
         this.classList.toggle('red');
 
         if(likeCtr.classList.contains('red')) {
-            likeCounter[i].innerHTML++
+            likeCounter[i].innerHTML++;
+            // likedPosts.push[]
         } else {
             likeCounter[i].innerHTML--
         }
