@@ -57,7 +57,8 @@ const posts = [
 ];
 
 //SELEZIONIAMO TUTTI GLI ELEMENTI CHE SERVONO
-let postContainer = document.querySelectorAll('post');
+let postContainer = document.querySelectorAll('.post');
 let profileImage = document.querySelectorAll('.profile-pic');
 let author = document.querySelectorAll('.post-meta__author');
-let postTime = document.querySelectorAll('.post-meta__time')
+let postTime = document.querySelectorAll('.post-meta__time');
+let postCOntent = document.querySelectorAll('.post__text');
