@@ -112,6 +112,8 @@ let likeCounter = document.querySelector('.js-likes-counter');
 likeBtn.addEventListener('click' , function() {
     likeBtn.classList.toggle('red');
     likeCounter.innerHTML += `${likeNumber + 1}`
+    console.log(likeNumber);
 })
+
 
 
