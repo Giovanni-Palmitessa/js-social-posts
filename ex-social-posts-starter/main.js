@@ -58,10 +58,6 @@ const posts = [
 
 //SELEZIONIAMO TUTTI GLI ELEMENTI CHE SERVONO
 let postContainer = document.querySelector('.posts-list');
-let profileImage = document.querySelectorAll('.profile-pic');
-let author = document.querySelectorAll('.post-meta__author');
-let postTime = document.querySelectorAll('.post-meta__time');
-let postContent = document.querySelectorAll('.post__text');
 let likedPosts = [];
 
 
