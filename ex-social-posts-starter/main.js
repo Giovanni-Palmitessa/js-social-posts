@@ -62,7 +62,6 @@ let profileImage = document.querySelectorAll('.profile-pic');
 let author = document.querySelectorAll('.post-meta__author');
 let postTime = document.querySelectorAll('.post-meta__time');
 let postContent = document.querySelectorAll('.post__text');
-let likeNumber;
 let likedPosts = [];
 
 
@@ -70,8 +69,6 @@ let likedPosts = [];
 
 for (let i = 0; i < posts.length; i++) {
     let post = posts[i];
-
-    likeNumber = post.likes;
 
     postContainer.innerHTML += `
         <div class="post">
@@ -99,7 +96,7 @@ for (let i = 0; i < posts.length; i++) {
                             </div>
                         </div>
                         <div class="likes__counter">
-                            Piace a <b id="like-counter-${post.id}" class="js-likes-counter">${likeNumber}</b> persone
+                            Piace a <b id="like-counter-${post.id}" class="js-likes-counter">${post.likes}</b> persone
                         </div>
                     </div>
                 </div>
