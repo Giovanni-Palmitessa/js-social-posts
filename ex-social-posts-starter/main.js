@@ -62,7 +62,7 @@ let likedPosts = [];
 
 
 // CICLO FOR PER STAMPARE IN PAGINA I POST
-
+postContainer.innerHTML = '';
 for (let i = 0; i < posts.length; i++) {
     let post = posts[i];
 
